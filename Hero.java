@@ -1,7 +1,11 @@
-public class Hero {
+public class Hero implements Comparable<Hero> {
 
     private String name;
     private int age;
+
+    public int compareTo(Hero otherHero){
+        return this.getName().compareTo(otherHero.getName());
+    }
 
     public Hero(String name, int age) {
         this.name = name;
